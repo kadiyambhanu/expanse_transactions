@@ -1,0 +1,21 @@
+# Netlify Configuration File
+
+[build]
+  # Directory to change to before starting a build
+  base = "frontend/"
+  
+  # Directory that contains the deploy-ready HTML files and assets
+  publish = "build/"
+  
+  # Default build command
+  command = "npm run build"
+
+# Redirect all requests to index.html for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables (optional - set these in Netlify UI instead for security)
+# [build.environment]
+#   REACT_APP_API_URL = "https://your-backend-url.com/api"
